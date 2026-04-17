@@ -1,0 +1,21 @@
+# Zerodha Kite API
+kiteconnect
+
+# Technical Analysis
+pandas
+numpy
+
+# HTTP Requests
+requests
+
+# Telegram
+python-telegram-bot
+
+# Logging
+python-dotenv
+
+# Scheduling
+schedule
+
+# Date/Time handling
+python-dateutil

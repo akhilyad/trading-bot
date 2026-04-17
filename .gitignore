@@ -1,0 +1,76 @@
+# =============================================================================
+# ENVIRONMENT VARIABLES (CRITICAL - NEVER COMMIT)
+# =============================================================================
+.env
+.env.local
+.env.*.local
+
+# API KEYS & TOKENS (CRITICAL - NEVER COMMIT)
+*.key
+*.pem
+*.cert
+credentials.json
+secrets.json
+api_keys.json
+tokens.json
+
+# LOG FILES
+*.log
+trading_bot.log
+bot.log
+debug.log
+
+# STATE FILES
+*state*.json
+*.state
+state.json
+state_backup.json
+
+# CACHE
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# BUILD OUTPUTS
+dist/
+build/
+*.egg-info/
+*.egg
+
+# VIRTUAL ENVIRONMENTS
+venv/
+env/
+.venv/
+ENV/
+
+# TEMP FILES
+temp/
+tmp/
+*.tmp
+temp_*
+
+# DATABASE (if any)
+*.db
+*.sqlite
+*.sqlite3
+
+# BACKUPS
+*.bak
+*.backup
+*_backup.*
+
+# LOCAL CONFIG (may contain sensitive data)
+config.local.py
+settings.local.py
+local_settings.py

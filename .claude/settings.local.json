@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(pip install *)",
+      "Bash(python -m py_compile elite_quant_bot_v5.py)",
+      "Bash(python -c \"import elite_quant_bot_v5; print\\('Import OK'\\)\")"
+    ]
+  }
+}
