@@ -1,5 +1,5 @@
 """
-ELITE QUANT BOT v2.0
+Onyx v2.0
 The smartest, deadliest trading bot ever built.
 Architecture: Multi-Timeframe | Regime Detection | Strategy Ensemble | Kelly Sizing | Portfolio Risk
 """
@@ -1244,7 +1244,7 @@ class EliteQuantBot:
     def connect(self) -> bool:
         """Initialize connections."""
         logger.info("=" * 60)
-        logger.info("ELITE QUANT BOT v2.0 - INITIALIZING")
+        logger.info("Onyx v2.0 - INITIALIZING")
         logger.info("=" * 60)
 
         # Connect to broker
@@ -1496,7 +1496,7 @@ class EliteQuantBot:
 
     def start(self):
         """Start the bot."""
-        logger.info("Starting ELITE QUANT BOT v2.0...")
+        logger.info("Starting Onyx v2.0...")
 
         self.load_state()
 

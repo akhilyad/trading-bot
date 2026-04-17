@@ -1,5 +1,5 @@
 """
-ELITE QUANT BOT v5.5 - ULTIMATE GOD MODE
+Onyx v5.5 - ULTIMATE GOD MODE
 The most advanced, unbeatable trading system ever created.
 
 INTEGRATED MODULES (ALL):
@@ -306,7 +306,7 @@ class Trade:
 
 
 # =============================================================================
-# MAIN ELITE QUANT BOT v5.0 - ABSOLUTE GOD MODE
+# MAIN Onyx v5.0 - ABSOLUTE GOD MODE
 # =============================================================================
 
 class EliteQuantBotv5:
@@ -446,7 +446,7 @@ class EliteQuantBotv5:
 
     def connect(self) -> bool:
         logger.info("=" * 80)
-        logger.info("ELITE QUANT BOT v5.0 - ABSOLUTE GOD MODE ACTIVATED")
+        logger.info("Onyx v5.0 - ABSOLUTE GOD MODE ACTIVATED")
         logger.info("ALL SYSTEMS ONLINE - UNBEATABLE MODE")
         logger.info("=" * 80)
 

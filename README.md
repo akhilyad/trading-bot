@@ -16,7 +16,7 @@
   <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=80&section=header" />
 </p>
 
-# ⚡ ELITE QUANT BOT v5.5 - ULTIMATE GOD MODE TRADING SYSTEM ⚡
+# ⚡ Onyx v5.5 - ULTIMATE GOD MODE TRADING SYSTEM ⚡
 
 > The most advanced, fully-integrated algorithmic trading bot for Indian markets (NSE/BSE). Self-learning. Self-evolving. Unbeatable.
 

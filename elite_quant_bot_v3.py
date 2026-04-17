@@ -1,5 +1,5 @@
 """
-ELITE QUANT BOT v3.0 - GOD MODE
+Onyx v3.0 - GOD MODE
 The most advanced, unbeatable trading system ever created.
 
 ARCHITECTURE:
@@ -706,7 +706,7 @@ class LearningModule:
 
 
 # =============================================================================
-# MAIN ELITE QUANT BOT v3.0 - GOD MODE
+# MAIN Onyx v3.0 - GOD MODE
 # =============================================================================
 
 class EliteQuantBotv3:
@@ -762,7 +762,7 @@ class EliteQuantBotv3:
 
     def connect(self) -> bool:
         logger.info("=" * 60)
-        logger.info("ELITE QUANT BOT v3.0 - GOD MODE ACTIVATED")
+        logger.info("Onyx v3.0 - GOD MODE ACTIVATED")
         logger.info("=" * 60)
 
         access_token = os.getenv("KITE_ACCESS_TOKEN")
@@ -980,7 +980,7 @@ class EliteQuantBotv3:
                 self.scan_count = state.get('scan_count', 0)
 
     def start(self):
-        logger.info("Starting ELITE QUANT BOT v3.0 - GOD MODE...")
+        logger.info("Starting Onyx v3.0 - GOD MODE...")
 
         self.load_state()
 
