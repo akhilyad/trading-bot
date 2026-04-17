@@ -1,5 +1,5 @@
 """
-ELITE AI TRADING SYSTEM
+Onyx AI TRADING SYSTEM
 The finest trading bot ever known to mankind.
 Built for maximum frequency, precision, and profitability.
 """
@@ -88,15 +88,15 @@ class EliteTradingBot:
 
     def connect(self, access_token: str = None) -> bool:
         """Connect to broker API."""
-        logger.info("Connecting to ELITE Trading System...")
+        logger.info("Connecting to Onyx Trading System...")
         success = self.client.connect(access_token)
 
         if success:
             self.notifier.send_status_update(
-                "ELITE Bot Activated",
+                "Onyx Bot Activated",
                 f"Mode: {TRADING_MODE} | Scanning: 30s intervals"
             )
-            logger.info("=== ELITE TRADING SYSTEM ONLINE ===")
+            logger.info("=== Onyx TRADING SYSTEM ONLINE ===")
         else:
             self.notifier.send_error_alert("Failed to connect to Zerodha")
 
@@ -577,9 +577,9 @@ Respond ONLY in this exact JSON format:
                 logger.info(f"Loaded state: {len(self.positions)} positions, {len(self.trade_history)} trades")
 
     def start(self):
-        """Start the ELITE trading bot."""
+        """Start the Onyx trading bot."""
         logger.info("=" * 60)
-        logger.info("INITIALIZING ELITE TRADING SYSTEM")
+        logger.info("INITIALIZING Onyx TRADING SYSTEM")
         logger.info("=" * 60)
 
         # Load state
@@ -601,7 +601,7 @@ Respond ONLY in this exact JSON format:
         self.run_market_scan()
 
         logger.info("=" * 60)
-        logger.info("ELITE BOT ONLINE - SCANNING EVERY 30 SECONDS")
+        logger.info("Onyx BOT ONLINE - SCANNING EVERY 30 SECONDS")
         logger.info("=" * 60)
 
         # Main loop
@@ -621,10 +621,10 @@ Respond ONLY in this exact JSON format:
 
         except KeyboardInterrupt:
             logger.info("Bot stopped by user")
-            self.notifier.send_status_update("ELITE Bot Stopped", f"Total PnL: ₹{self.daily_pnl:.2f}")
+            self.notifier.send_status_update("Onyx Bot Stopped", f"Total PnL: ₹{self.daily_pnl:.2f}")
         except Exception as e:
             logger.error(f"Bot error: {e}")
-            self.notifier.send_error_alert(f"ELITE Bot Error: {e}")
+            self.notifier.send_error_alert(f"Onyx Bot Error: {e}")
 
         return True
 

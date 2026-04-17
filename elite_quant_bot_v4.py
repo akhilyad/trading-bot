@@ -1,5 +1,5 @@
 """
-Onyx v4.0 - ULTIMATE GOD MODE
+Onyx v4.0 - ULTIMATE 
 The most advanced, unbeatable trading system ever created.
 
 INTEGRATED MODULES:
@@ -18,7 +18,7 @@ INTEGRATED MODULES:
 - Self-learning from trade outcomes
 - Reinforcement learning simulation
 
-UNBEATABLE. ABSOLUTE GOD MODE.
+UNBEATABLE. ABSOLUTE .
 """
 
 import os
@@ -605,12 +605,12 @@ class ForwardTesting:
 
 
 # =============================================================================
-# MAIN Onyx v4.0 - ULTIMATE GOD MODE
+# MAIN Onyx v4.0 - ULTIMATE 
 # =============================================================================
 
 class EliteQuantBotv4:
     """
-    THE ULTIMATE TRADING SYSTEM - GOD MODE ACTIVATED
+    THE ULTIMATE TRADING SYSTEM -  ACTIVATED
     Everything integrated. Nothing held back.
     """
 
@@ -652,14 +652,14 @@ class EliteQuantBotv4:
 
     def connect(self) -> bool:
         logger.info("=" * 70)
-        logger.info("Onyx v4.0 - ULTIMATE GOD MODE ACTIVATED")
+        logger.info("Onyx v4.0 - ULTIMATE  ACTIVATED")
         logger.info("ALL SYSTEMS ONLINE - UNBEATABLE MODE")
         logger.info("=" * 70)
 
         if not self.client.connect(os.getenv("KITE_ACCESS_TOKEN")):
             return False
 
-        self.notifier.send_status_update("ELITE v4.0 GOD MODE", f"Scan: {self.scan_interval}s | Unlimited Power")
+        self.notifier.send_status_update("Onyx v4.0 ", f"Scan: {self.scan_interval}s | Unlimited Power")
         return True
 
     def run_scan(self):
@@ -858,7 +858,7 @@ class EliteQuantBotv4:
                 self.scan_count = s.get('scan_count', 0)
 
     def start(self):
-        logger.info("Starting ELITE v4.0 - ULTIMATE GOD MODE...")
+        logger.info("Starting Onyx v4.0 - ULTIMATE ...")
 
         self.load_state()
 
@@ -871,7 +871,7 @@ class EliteQuantBotv4:
         time.sleep(2)
         self.run_scan()
 
-        logger.info(f"GOD MODE ONLINE - Scanning every {self.scan_interval}s")
+        logger.info(f" ONLINE - Scanning every {self.scan_interval}s")
 
         try:
             while True:
@@ -887,7 +887,7 @@ class EliteQuantBotv4:
 
         except KeyboardInterrupt:
             logger.info("Bot stopped")
-            self.notifier.send_status_update("ELITE v4.0 Stopped", f"PnL: ₹{self.daily_pnl:.2f}")
+            self.notifier.send_status_update("Onyx v4.0 Stopped", f"PnL: ₹{self.daily_pnl:.2f}")
         except Exception as e:
             logger.error(f"Error: {e}")
             self.notifier.send_error_alert(f"Error: {e}")

@@ -1,5 +1,5 @@
 """
-Onyx v5.5 - ULTIMATE GOD MODE
+Onyx - More than a Trading Bot
 The most advanced, unbeatable trading system ever created.
 
 INTEGRATED MODULES (ALL):
@@ -28,7 +28,7 @@ INTEGRATED MODULES (ALL):
 ✓ Correlation heatmap & sector rotation
 ✓ Calendar anomaly detection
 
-ABSOLUTE GOD MODE - UNBEATABLE.
+More than a Trading Bot
 """
 
 import os
@@ -306,12 +306,12 @@ class Trade:
 
 
 # =============================================================================
-# MAIN Onyx v5.0 - ABSOLUTE GOD MODE
+# MAIN Onyx - More than a Trading Bot
 # =============================================================================
 
 class EliteQuantBotv5:
     """
-    THE ABSOLUTE GOD MODE TRADING SYSTEM
+    THE ADVANCED TRADING SYSTEM
     Everything integrated. Nothing held back.
     """
 
@@ -446,15 +446,15 @@ class EliteQuantBotv5:
 
     def connect(self) -> bool:
         logger.info("=" * 80)
-        logger.info("Onyx v5.0 - ABSOLUTE GOD MODE ACTIVATED")
-        logger.info("ALL SYSTEMS ONLINE - UNBEATABLE MODE")
+        logger.info("Onyx - More than a Trading Bot ACTIVATED")
+        logger.info("ALL SYSTEMS ONLINE - ONYX ACTIVE")
         logger.info("=" * 80)
 
         if not self.client.connect(os.getenv("KITE_ACCESS_TOKEN")):
             return False
 
         self.notifier.send_status_update(
-            "ELITE v5.0 ABSOLUTE GOD MODE",
+            "Onyx - More than a Trading Bot",
             f"Scan: {self.scan_interval}s | All Features Active"
         )
         return True
@@ -919,7 +919,7 @@ class EliteQuantBotv5:
 
     def start(self):
         """Start the bot."""
-        logger.info("Starting ELITE v5.0 - ABSOLUTE GOD MODE...")
+        logger.info("Starting Onyx - More than a Trading Bot...")
 
         self.load_state()
         self._init_advanced_modules()
@@ -933,7 +933,7 @@ class EliteQuantBotv5:
         time.sleep(2)
         self.run_scan()
 
-        logger.info(f"GOD MODE ONLINE - Scanning every {self.scan_interval}s")
+        logger.info(f"ONYX ACTIVE - Scanning every {self.scan_interval}s")
 
         try:
             while True:
@@ -949,7 +949,7 @@ class EliteQuantBotv5:
 
         except KeyboardInterrupt:
             logger.info("Bot stopped")
-            self.notifier.send_status_update("ELITE v5.0 Stopped", f"PnL: ₹{self.daily_pnl:.2f}")
+            self.notifier.send_status_update("Onyx Stopped", f"PnL: ₹{self.daily_pnl:.2f}")
         except Exception as e:
             logger.error(f"Error: {e}")
             self.notifier.send_error_alert(f"Error: {e}")

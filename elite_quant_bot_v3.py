@@ -1,5 +1,5 @@
 """
-Onyx v3.0 - GOD MODE
+Onyx v3.0 - 
 The most advanced, unbeatable trading system ever created.
 
 ARCHITECTURE:
@@ -706,13 +706,13 @@ class LearningModule:
 
 
 # =============================================================================
-# MAIN Onyx v3.0 - GOD MODE
+# MAIN Onyx v3.0 - 
 # =============================================================================
 
 class EliteQuantBotv3:
     """
     The most advanced trading bot ever built.
-    GOD MODE ACTIVATED.
+     ACTIVATED.
     """
 
     def __init__(self):
@@ -762,14 +762,14 @@ class EliteQuantBotv3:
 
     def connect(self) -> bool:
         logger.info("=" * 60)
-        logger.info("Onyx v3.0 - GOD MODE ACTIVATED")
+        logger.info("Onyx v3.0 -  ACTIVATED")
         logger.info("=" * 60)
 
         access_token = os.getenv("KITE_ACCESS_TOKEN")
         if not self.client.connect(access_token):
             return False
 
-        self.notifier.send_status_update("ELITE v3.0 GOD MODE", f"Scan: {self.scan_interval}s | Risk: Unlimited")
+        self.notifier.send_status_update("Onyx v3.0 ", f"Scan: {self.scan_interval}s | Risk: Unlimited")
         logger.info("ALL SYSTEMS ONLINE - UNBEATABLE MODE")
         return True
 
@@ -980,7 +980,7 @@ class EliteQuantBotv3:
                 self.scan_count = state.get('scan_count', 0)
 
     def start(self):
-        logger.info("Starting Onyx v3.0 - GOD MODE...")
+        logger.info("Starting Onyx v3.0 - ...")
 
         self.load_state()
 
@@ -993,7 +993,7 @@ class EliteQuantBotv3:
         time.sleep(2)
         self.run_scan()
 
-        logger.info(f"GOD MODE ONLINE - Scanning every {self.scan_interval}s")
+        logger.info(f" ONLINE - Scanning every {self.scan_interval}s")
 
         try:
             while True:
@@ -1010,7 +1010,7 @@ class EliteQuantBotv3:
 
         except KeyboardInterrupt:
             logger.info("Bot stopped")
-            self.notifier.send_status_update("ELITE v3.0 Stopped", f"PnL: ₹{self.daily_pnl:.2f}")
+            self.notifier.send_status_update("Onyx v3.0 Stopped", f"PnL: ₹{self.daily_pnl:.2f}")
         except Exception as e:
             logger.error(f"Error: {e}")
             self.notifier.send_error_alert(f"Error: {e}")

@@ -1199,7 +1199,7 @@ class LearningModule:
 
 
 # =============================================================================
-# MAIN ELITE BOT
+# MAIN Onyx BOT
 # =============================================================================
 
 class EliteQuantBot:
@@ -1254,7 +1254,7 @@ class EliteQuantBot:
             return False
 
         self.notifier.send_status_update(
-            "ELITE v2.0 Activated",
+            "Onyx v2.0 Activated",
             f"Mode: {TRADING_MODE} | Scan: {self.scan_interval}s"
         )
 
@@ -1512,7 +1512,7 @@ class EliteQuantBot:
         time.sleep(2)
         self.run_scan()
 
-        logger.info(f"ELITE v2.0 ONLINE - Scanning every {self.scan_interval}s")
+        logger.info(f"Onyx v2.0 ONLINE - Scanning every {self.scan_interval}s")
 
         # Main loop
         try:
@@ -1527,7 +1527,7 @@ class EliteQuantBot:
 
         except KeyboardInterrupt:
             logger.info("Bot stopped by user")
-            self.notifier.send_status_update("ELITE v2.0 Stopped", f"PnL: ₹{self.daily_pnl:.2f}")
+            self.notifier.send_status_update("Onyx v2.0 Stopped", f"PnL: ₹{self.daily_pnl:.2f}")
         except Exception as e:
             logger.error(f"Error: {e}")
             self.notifier.send_error_alert(f"Error: {e}")

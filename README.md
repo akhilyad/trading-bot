@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=ELITE+QUANT+BOT+v5.5&fontSize=80&animation=waving&fontAlign=50" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=ONYX&fontSize=80&animation=waving&fontAlign=50" />
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
   <img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=80&section=header" />
 </p>
 
-# ⚡ Onyx v5.5 - ULTIMATE GOD MODE TRADING SYSTEM ⚡
+# ⚡ Onyx - More than a Trading Bot ⚡
 
 > The most advanced, fully-integrated algorithmic trading bot for Indian markets (NSE/BSE). Self-learning. Self-evolving. Unbeatable.
 
