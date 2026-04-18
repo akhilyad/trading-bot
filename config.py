@@ -4,14 +4,27 @@ Load from environment variables for security.
 """
 
 import os
+import warnings
 from dotenv import load_dotenv
 
 load_dotenv()
+
+
+def _validate_required(key: str, value: str, required: bool = False) -> str:
+    """Validate required environment variables."""
+    if not value and required:
+        warnings.warn(f"Required environment variable {key} is not set")
+    return value
+
 
 # Zerodha Kite API Credentials
 KITE_API_KEY = os.getenv("KITE_API_KEY", "")
 KITE_API_SECRET = os.getenv("KITE_API_SECRET", "")
 KITE_ACCESS_TOKEN = os.getenv("KITE_ACCESS_TOKEN", "")
+
+# Validate required credentials
+if not KITE_API_KEY:
+    warnings.warn("KITE_API_KEY not set in environment - bot may not function correctly")
 
 # Telegram Bot
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")

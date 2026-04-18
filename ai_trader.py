@@ -29,6 +29,10 @@ class AITradingClient:
         self.api_key = os.getenv("ANTHROPIC_AUTH_TOKEN", api_key)
         self.model = os.getenv("ANTHROPIC_MODEL", model or "minimax-m2.5-free")
 
+        # Validate credentials at initialization
+        if not self.api_key:
+            logger.warning("ANTHROPIC_AUTH_TOKEN not set - AI features will be disabled")
+
         self.headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"
@@ -113,9 +117,11 @@ Respond in this exact JSON format:
         delta = prices.diff()
         gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
         loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
-        rs = gain / loss
+        # Avoid division by zero - replace 0 with tiny value
+        loss_safe = loss.replace(0, 1e-10)
+        rs = gain / loss_safe
         rsi = 100 - (100 / (1 + rs))
-        return rsi
+        return rsi.fillna(50)
 
     def _call_api(self, prompt: str) -> str:
         """Call the AI API."""
@@ -192,9 +198,11 @@ Respond in this exact JSON format:
 
             # Fallback: look for keywords in text
             response_upper = response.upper()
-            if "BUY" in response_upper and "BUY" not in response_upper[:50]:
+            buy_pos = response_upper.find("BUY")
+            sell_pos = response_upper.find("SELL")
+            if buy_pos >= 0 and (sell_pos < 0 or buy_pos < sell_pos):
                 return {"decision": "BUY", "reasoning": response[:200], "confidence": 60}
-            elif "SELL" in response_upper and "SELL" not in response_upper[:50]:
+            elif sell_pos >= 0:
                 return {"decision": "SELL", "reasoning": response[:200], "confidence": 60}
             else:
                 return {"decision": "HOLD", "reasoning": response[:200], "confidence": 30}

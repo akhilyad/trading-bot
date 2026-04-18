@@ -39,7 +39,7 @@ def get_access_token():
     print("2. Login with your Zerodha credentials")
     print("3. After login, you'll be redirected to your registered redirect URL")
     print("4. Copy the 'request_token' from the redirect URL")
-    print("   (It looks like: ?request_token=xxxxxxxxx&...)
+    print("   (It looks like: ?request_token=xxxxxxxxx&...)")
     print("\n")
 
     request_token = input("Enter the request token: ").strip()
