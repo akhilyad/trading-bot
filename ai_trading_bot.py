@@ -200,7 +200,7 @@ class AITradingBot:
                 if should_get_ai_opinion:
                     data = self.fetch_market_data(symbol)
                     if data:
-                    ai_analysis = self.ai_trader.analyze_market(
+                        ai_analysis = self.ai_trader.analyze_market(
                         symbol,
                         data,
                         current_price,
